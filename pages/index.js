@@ -7,6 +7,7 @@ import Layout from "@/components/layout";
 import MoreStories from "@/components/more-stories";
 import { request } from "@/lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@/lib/fragments";
+import SectionSeparator from "@/components/section-separator";
 
 export async function getStaticProps({ preview }) {
   const graphqlRequest = {
@@ -24,6 +25,7 @@ export async function getStaticProps({ preview }) {
         }
         allPosts(orderBy: date_DESC, first: 20) {
           title
+          subtitle
           slug
           excerpt
           date
@@ -80,7 +82,6 @@ export default function Index({ subscription }) {
       <Layout preview={subscription.preview}>
         <Head>{renderMetaTags(metaTags)}</Head>
         <Container>
-          <Intro />
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -91,6 +92,7 @@ export default function Index({ subscription }) {
               excerpt={heroPost.excerpt}
             />
           )}
+          <SectionSeparator />
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </Layout>

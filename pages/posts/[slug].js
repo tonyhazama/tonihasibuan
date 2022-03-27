@@ -33,6 +33,7 @@ export async function getStaticProps({ params, preview = false }) {
             ...metaTagsFragment
           }
           title
+          subtitle
           slug
           content {
             value
@@ -125,10 +126,10 @@ export default function Post({ subscription, preview }) {
     <Layout preview={preview}>
       <Head>{renderMetaTags(metaTags)}</Head>
       <Container>
-        <Header />
         <article>
           <PostHeader
             title={post.title}
+            subtitle={post.subtitle}
             coverImage={post.coverImage}
             date={post.date}
             author={post.author}

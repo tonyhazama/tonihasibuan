@@ -2,7 +2,7 @@ import { Image } from "react-datocms";
 import cn from "classnames";
 import Link from "next/link";
 
-export default function CoverImage({ title, responsiveImage, slug }) {
+export default function CoverImage({ title, responsiveImage, slug, padding = 0 }) {
   const image = (
     <Image
       data={{
@@ -15,7 +15,7 @@ export default function CoverImage({ title, responsiveImage, slug }) {
     />
   );
   return (
-    <div className="-mx-5 sm:mx-0">
+    <div className={`-mx-${padding} sm:mx-0`}>
       {slug ? (
         <Link href={`/posts/${slug}`}>
           <a aria-label={title}>{image}</a>

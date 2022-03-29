@@ -15,7 +15,7 @@ export default function Header() {
           <span className="text-sm">{titles.siteDescription}</span>
         </Container>
       </div>
-      <div className="h-24 mb-8 md:h-32"></div>
+      <div className="h-[88px] md:h-[100px]"></div>
     </>
   );
 }

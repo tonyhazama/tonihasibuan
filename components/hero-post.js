@@ -13,7 +13,8 @@ export default function HeroPost({
 }) {
   return (
     <section>
-      <div className="mb-4 md:mb-8">
+      
+      <div className="mb-4 mt-4 md:mb-8 md:mt-12">
         <CoverImage
           title={title}
           responsiveImage={coverImage.responsiveImage}
@@ -21,7 +22,7 @@ export default function HeroPost({
           padding={5}
         />
       </div>
-      <div className="md:grid md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
+      <div className="md:grid md:gap-x-16 lg:gap-x-8 mb-12 md:mb-12">
         <div>
           <h3 className="mb-4 text-4xl lg:text-6xl leading-tight font-bold">
             <Link href={`/posts/${slug}`}>

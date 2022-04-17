@@ -3,9 +3,9 @@ import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import Container from "@/components/container";
 import Header from "@/components/header";
 import Layout from "@/components/layout";
-import MoreStories from "@/components/more-stories";
-import PostBody from "@/components/post-body";
-import PostHeader from "@/components/post-header";
+import MoreStories from "@/components/blog/more-stories";
+import PostBody from "@/components/blog/post-body";
+import PostHeader from "@/components/blog/post-header";
 import SectionSeparator from "@/components/section-separator";
 import { request } from "@/lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@/lib/fragments";
@@ -14,7 +14,7 @@ export async function getStaticPaths() {
   const data = await request({ query: `{ allPosts { slug } }` });
 
   return {
-    paths: data.allPosts.map((post) => `/posts/${post.slug}`),
+    paths: data.allPosts.map((post) => `/blog/posts/${post.slug}`),
     fallback: false,
   };
 }

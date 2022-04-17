@@ -1,10 +1,11 @@
-import Avatar from "./avatar";
-import Date from "./date";
+import Date from "../date";
 import CoverImage from "./cover-image";
-import Link from "next/link";
+import PostSubtitle from "./post-subtitle";
+import PostTitle from "./post-title";
 
 export default function HeroPost({
   title,
+  subtitle,
   coverImage,
   date,
   excerpt,
@@ -13,8 +14,7 @@ export default function HeroPost({
 }) {
   return (
     <section>
-      
-      <div className="mb-4 mt-4 md:mb-8 md:mt-12">
+      <div className="mb-4 mt-12 md:mb-8">
         <CoverImage
           title={title}
           responsiveImage={coverImage.responsiveImage}
@@ -22,14 +22,13 @@ export default function HeroPost({
           padding={5}
         />
       </div>
-      <div className="md:grid md:gap-x-16 lg:gap-x-8 mb-12 md:mb-12">
+      <div>
+        <PostTitle>{title}</PostTitle>
+        <PostSubtitle>{subtitle}</PostSubtitle>
+      </div>
+      <div className="mb-12">
         <div>
-          <h3 className="mb-4 text-4xl lg:text-6xl leading-tight font-bold">
-            <Link href={`/posts/${slug}`}>
-              <a className="hover:underline">{title}</a>
-            </Link>
-          </h3>
-          <div className="mb-4 md:mb-0 text-lg">
+          <div className="mb-2 text-lg">
             <Date dateString={date} />
           </div>
         </div>

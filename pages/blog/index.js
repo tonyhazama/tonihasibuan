@@ -1,10 +1,12 @@
 import Head from "next/head";
 import { renderMetaTags, useQuerySubscription } from "react-datocms";
+import Container from "@/components/container";
+import HeroPost from "@/components/blog/hero-post";
 import Layout from "@/components/layout";
+import MoreStories from "@/components/blog/more-stories";
 import { request } from "@/lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@/lib/fragments";
-import Landing from "@/components/portofolio/landing";
-import Portofolio from "@/components/portofolio/portofolio";
+import SectionSeparator from "@/components/section-separator";
 
 export async function getStaticProps({ preview }) {
   const graphqlRequest = {
@@ -20,23 +22,23 @@ export async function getStaticProps({ preview }) {
             ...metaTagsFragment
           }
         }
-        workProjects: allProjects(filter: {formal: {eq: true}}) {
+        allPosts(orderBy: date_DESC, first: 20) {
           title
           subtitle
-          id
-          thumbnail {
-            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 400, h: 280 }) {
+          slug
+          excerpt
+          date
+          coverImage {
+            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
               ...responsiveImageFragment
             }
           }
-        }
-        funProjects: allProjects(filter: {formal: {eq: false}}) {
-          title
-          subtitle
-          id
-          thumbnail {
-            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 400, h: 280 }) {
-              ...responsiveImageFragment
+          author {
+            name
+            picture {
+              responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100, sat: -100}) {
+                ...responsiveImageFragment
+              }
             }
           }
         }
@@ -67,29 +69,33 @@ export async function getStaticProps({ preview }) {
 
 export default function Index({ subscription }) {
   const {
-    data: { workProjects, funProjects, site, blog },
+    data: { allPosts, site, blog },
   } = useQuerySubscription(subscription);
 
+  const heroPost = allPosts[0];
+  const morePosts = allPosts.slice(1);
   const metaTags = blog.seo.concat(site.favicon);
 
   return (
     <>
-        <Layout preview={subscription.preview}>
-          <Head>{renderMetaTags(metaTags)}</Head>
-          <div>
-            <Landing />
-            <Portofolio 
-              title="This is what i've worked on"
-              subtitle="A curated list of professional work i did over the years."
-              projects={workProjects} />
-            
-            <Portofolio 
-              title="This is what i make on my free time"
-              subtitle="Fun Project, experiments and other interesting stuff."
-              projects={funProjects} />
-              {/* <pre>{JSON.stringify(al Projects, '', 2)}</pre> */}
-          </div>
-        </Layout>
+      <Layout preview={subscription.preview}>
+        <Head>{renderMetaTags(metaTags)}</Head>
+        <Container>
+          {heroPost && (
+            <HeroPost
+              title={heroPost.title}
+              subtitle={heroPost.subtitle}
+              coverImage={heroPost.coverImage}
+              date={heroPost.date}
+              author={heroPost.author}
+              slug={heroPost.slug}
+              excerpt={heroPost.excerpt}
+            />
+          )}
+          <SectionSeparator />
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        </Container>
+      </Layout>
     </>
   );
 }

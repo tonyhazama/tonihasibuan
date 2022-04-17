@@ -5,7 +5,7 @@ import Header from "./header";
 export default function Layout({ preview, children }) {
   return (
     <>
-      <div className="min-h-screen">
+      <div className="min-h-screen dark">
         {/* <Alert preview={preview} /> */}
         
         <Header/>

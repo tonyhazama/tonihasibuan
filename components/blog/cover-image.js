@@ -17,7 +17,7 @@ export default function CoverImage({ title, responsiveImage, slug, padding = 0 }
   return (
     <div className={`-mx-${padding} sm:mx-0`}>
       {slug ? (
-        <Link href={`/posts/${slug}`}>
+        <Link href={`/blog/posts/${slug}`}>
           <a aria-label={title}>{image}</a>
         </Link>
       ) : (

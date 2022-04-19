@@ -20,6 +20,10 @@ module.exports = {
         success: "#0070f3",
         cyan: "#79FFE1",
       },
+      height: {
+        
+        header: "72px"
+      },
       spacing: {
         28: "7rem",
       },

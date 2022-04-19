@@ -6,8 +6,8 @@ export default function Landing({title, description, currentPosition, profilePic
   return (
     <div className="">
       <Container>
-        <div className="min-h-[400px] pt-8 pb-16  md:py-16 flex border-b-2 border-stone-200 dark:border-sub-dark flex-col md:flex-row-reverse">
-          <div className="w-full mb-8 md:mb-0 md:w-[400px] rounded-xl overflow-hidden">
+        <div className="pt-8 pb-16  md:py-16 flex border-b-2 border-stone-200 dark:border-sub-dark flex-col md:flex-row-reverse">
+          <div className="w-full mb-8 md:mb-0 md:w-96 rounded-xl overflow-hidden">
             {profilePicture && 
               <Image data={{ ...profilePicture.responsiveImage, alt: `Profile Picture`, }} />
             }

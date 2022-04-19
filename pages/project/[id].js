@@ -39,7 +39,7 @@ export async function getStaticProps({ params, preview }) {
             subtitle
             id
             date
-            scope {
+            scopes {
               title
             }
             techStacks {
@@ -47,6 +47,12 @@ export async function getStaticProps({ params, preview }) {
             }
             thumbnail {
               responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
+                ...responsiveImageFragment
+              }
+            }
+            screenshots {
+              id
+              responsiveImage(imgixParams: {fm: jpg, fit: fill}) {
                 ...responsiveImageFragment
               }
             }
@@ -117,6 +123,7 @@ export default function Post({ subscription }) {
             date={project.date}
             scopes={project.scope}
             techStacks={project.techStacks}
+            project={project}
           />
           {/* <ProjectBody content={project.content} /> */}
         </article>

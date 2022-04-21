@@ -5,7 +5,6 @@ import { request } from "@/lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@/lib/fragments";
 import Landing from "@/components/portofolio/landing";
 import Portofolio from "@/components/portofolio/portofolio";
-import Contact from "@/components/portofolio/contact";
 
 export async function getStaticProps({ preview }) {
   const graphqlRequest = {
@@ -24,6 +23,9 @@ export async function getStaticProps({ preview }) {
             responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 400, h: 500 }) {
               ...responsiveImageFragment
             }
+          }
+          seo: _seoMetaTags {
+            ...metaTagsFragment
           }
         }
         blog {
@@ -71,7 +73,7 @@ export default function Index({ subscription }) {
     data: { projects, site, blog, profile },
   } = useQuerySubscription(subscription);
 
-  const metaTags = blog.seo.concat(site.favicon);
+  const metaTags = profile.seo.concat(site.favicon);
 
   return (
     <div className="dark:bg-main-dark text-main-dark">
@@ -83,7 +85,6 @@ export default function Index({ subscription }) {
             title="This is what i've worked on"
             subtitle="A curated list of professional work i did over the years."
             projects={projects} />
-          <Contact /> 
             {/* <pre>{JSON.stringify(al Projects, '', 2)}</pre> */}
         </div>
       </Layout>

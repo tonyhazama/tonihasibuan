@@ -116,15 +116,7 @@ export default function Post({ subscription }) {
             subtitle={project.subtitle}
             date={project.date}
           />
-          <ProjectBody
-            title={project.title}
-            thumbnail={project.thumbnail}
-            content={project.content}
-            date={project.date}
-            scopes={project.scope}
-            techStacks={project.techStacks}
-            project={project}
-          />
+          <ProjectBody project={project} />
           {/* <ProjectBody content={project.content} /> */}
         </article>
       </Container>

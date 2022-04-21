@@ -24,6 +24,9 @@ module.exports = {
         
         header: "72px"
       },
+      maxWidth: {
+        "header-title": "120px",
+      },
       spacing: {
         28: "7rem",
       },

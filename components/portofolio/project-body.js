@@ -4,24 +4,25 @@ import BackButton from '../back-button';
 import cn from "classnames";
 import Date from '../date';
 import Link from "next/link";
+// import { LinkIcon } from '@heroicons/react/solid';
 
 export default function ProjectBody({project}) {
-  const {title, thumbnail, content, scopes = [], techStacks = [], screenshots = []} = project; 
+  const {title, thumbnail, content, scopes = [], techStacks = [], screenshots = [], links = []} = project; 
   return (
     <div className="text-gray-700 dark:text-mid-white">
       <div className="flex flex-col md:flex-row">
         <div className="md:w-2/5 mb-8">
           <div className="text-lg mb-2 text-slate-400 dark:text-mid-dark">Scope</div>
           <div className="mb-8">
-            {scopes.map(scope => (
-              <div key={"scope-"+scope.title}>{scope.title}</div>
+            {techStacks.map(techStack => (
+              <div key={"techStack-"+techStack.title}>{techStack.title}</div>
             ))}
           </div>
-          <div className="text-lg mb-2 text-slate-400 dark:text-mid-dark">Links</div>
+          {/* <div className="text-lg mb-2 text-slate-400 dark:text-mid-dark">Links <LinkIcon className="h-4" /></div> */}
           <div>
-            {scopes.map(scope => (
-              <a href="/" target="_blank">
-                <div key={"scope-"+scope.title}>{scope.title}</div>
+            {links.map(link => (
+              <a href={link.target} target="_blank">
+                <div key={"scope-"+link.title}>{link.title}</div>
               </a>
             ))}
           </div>
@@ -44,10 +45,10 @@ export default function ProjectBody({project}) {
               }}
             />
           </div>
-          <div className="flex mb-4">
-            {techStacks.map(techStack => (
-              <div className="px-4 py-1 mr-4 bg-gray-200 flex dark:bg-sub-dark dark:text-mid-white">
-                {techStack.title}
+          <div className="flex mb-4 flex-wrap">
+            {scopes.map(scope => (
+              <div key={"scope-" + scope.title} className="px-4 py-1 mr-4 mb-4 bg-gray-200 flex dark:bg-sub-dark dark:text-mid-white">
+                # {scope.title}
               </div>
             ))}
           </div>
@@ -60,7 +61,7 @@ export default function ProjectBody({project}) {
             isDouble = (i + 1) % 3 === 1 ? true : false;
           }
           return (
-            <div className={"shadow-sm col-span-2 " + (isDouble ? "md:col-span-2" : "md:col-span-1")}>
+            <div key={"screenshot-"+screenshot.id} className={"shadow-sm col-span-2 " + (isDouble ? "md:col-span-2" : "md:col-span-1")}>
               <Image
                 data={{
                   ...screenshot.responsiveImage,

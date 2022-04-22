@@ -21,7 +21,7 @@ export default function Cv() {
     profession: "Web Developer",
     aboutMe: `I am a Professional Web Developer with 4 Years of Experience working in the IT industry. I am proficient in HTML/CSS, Javascript, React JS, and Angular. I am also competent in Java, Next.JS, and SQL Language. I have a strong artistic sense, logical thinking & problem-solving skills.`,
     contacts: [
-      {icon: AiFillMail, title: 'muhammad.sultoni@gmail.com', link: 'mailto:muhammad.sultoni@gmail.com'},
+      {icon: AiFillMail, title: 'mail@tonihasibuan.com', link: 'mailto:mail@tonihasibuan.com'},
       {icon: AiFillGithub, title: 'github.com/tonyhazama', link: 'https://github.com/tonyhazama'},
       {icon: AiFillLinkedin, title: 'in/muhammad-sultoni-hsb', link: 'https://www.linkedin.com/in/muhammad-sultoni-hsb/'},
       {icon: FiGlobe, title: 'www.tonihasibuan.com', link: 'https://www.tonihasibuan.com/'},

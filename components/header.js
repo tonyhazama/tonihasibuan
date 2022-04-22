@@ -33,7 +33,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="transition py-4 fixed top-0 left-0 right-0 shadow text-sm bg-white dark:bg-main-dark dark:border-b border-sub-dark dark:text-sub-white" style={{ zIndex: '100'}}>
+      <div className="transition py-4 fixed top-0 left-0 right-0 shadow text-sm bg-white dark:bg-main-dark dark:border-b border-sub-dark dark:text-sub-white print:hidden z-10">
         <Container>
           <div className="flex flex-wrap flex-row align-middle">
             <div className="flex-1 md:w-3/12 md:flex-none">
@@ -65,7 +65,7 @@ export default function Header() {
           </div>
         </Container>
       </div>
-      <div className="h-header"></div>
+      <div className="h-header print:hidden"></div>
     </>
   );
 }

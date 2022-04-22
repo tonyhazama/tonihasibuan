@@ -21,7 +21,6 @@ module.exports = {
         cyan: "#79FFE1",
       },
       height: {
-        
         header: "72px"
       },
       maxWidth: {
@@ -41,13 +40,18 @@ module.exports = {
       },
       padding: {
         "paper-margin": "4rem",
-        "paper-space": "3rem",
+        "paper-space": "2rem",
+      },
+      textColor: {
+        "cv-title": "#1C8274",
+        "cv-accent": "#1c2b41"
       },
       fontSize: {
         "5xl": "2.5rem",
         "6xl": "2.75rem",
         "7xl": "4.5rem",
         "8xl": "6.25rem",
+        "cv-title": "1.25rem",
       },
       boxShadow: {
         small: "0 5px 10px rgba(0, 0, 0, 0.12)",

@@ -353,7 +353,7 @@ const SkillItem = ({title, level, icon}) => {
 
   return (
     <div className="flex flex-wrap items-center mb-2 mr-2  p-1 px-2  rounded-sm border-gray-300 border-[1px] ">
-      {icon && <img src={`/static/${icon}`} className="h-[20px] mr-2" />}
+      {icon && <img src={`/static/${icon}`} className="h-skill-icon mr-2" />}
       <div>{title}</div>
       {level && (
         <>

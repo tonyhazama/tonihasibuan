@@ -21,7 +21,8 @@ module.exports = {
         cyan: "#79FFE1",
       },
       height: {
-        header: "72px"
+        header: "72px",
+        "skill-icon": "20px"
       },
       maxWidth: {
         "header-title": "120px",

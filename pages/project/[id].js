@@ -4,8 +4,8 @@ import Container from "@/components/container";
 import Layout from "@/components/layout";
 import { request } from "@/lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@/lib/fragments";
-import ProjectHeader from "@/components/portofolio/project-header";
-import ProjectBody from "@/components/portofolio/project-body";
+import ProjectHeader from "@/components/profile/project-header";
+import ProjectBody from "@/components/profile/project-body";
 
 export async function getStaticPaths() {
   const data = await request({ query: `{ allProjects { id } }` });

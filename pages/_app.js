@@ -5,9 +5,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <AppContextProvider>
-        <div className="transition dark:bg-main-dark  dark:text-sub-white">
-          <Component {...pageProps} />
-        </div>
+      <div className="transition dark:bg-main-dark  dark:text-sub-white">
+        <Component {...pageProps} />
+      </div>
     </AppContextProvider>
   );
 }

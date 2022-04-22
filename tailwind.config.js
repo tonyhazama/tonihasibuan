@@ -27,6 +27,9 @@ module.exports = {
       maxWidth: {
         "header-title": "120px",
       },
+      width: {
+        "cv": "72rem"
+      },
       spacing: {
         28: "7rem",
       },
@@ -35,6 +38,10 @@ module.exports = {
       },
       lineHeight: {
         tight: 1.2,
+      },
+      padding: {
+        "paper-margin": "4rem",
+        "paper-space": "3rem",
       },
       fontSize: {
         "5xl": "2.5rem",

@@ -3,8 +3,9 @@ import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import Layout from "@/components/layout";
 import { request } from "@/lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@/lib/fragments";
-import Landing from "@/components/portofolio/landing";
-import Portofolio from "@/components/portofolio/portofolio";
+import About from "@/components/profile/about";
+import Portfolio from "@/components/profile/portfolio";
+import Skills from "@/components/profile/skills";
 
 export async function getStaticProps({ preview }) {
   const graphqlRequest = {
@@ -80,11 +81,9 @@ export default function Index({ subscription }) {
       <Layout preview={subscription.preview}>
         <Head>{renderMetaTags(metaTags)}</Head>
         <div>
-          <Landing {...profile} />
-          <Portofolio 
-            title="This is what i've worked on"
-            subtitle="A curated list of professional work i did over the years."
-            projects={projects} />
+          <About {...profile} />
+          <Skills />
+          <Portfolio projects={projects} />
             {/* <pre>{JSON.stringify(al Projects, '', 2)}</pre> */}
         </div>
       </Layout>

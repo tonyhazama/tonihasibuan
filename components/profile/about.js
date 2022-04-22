@@ -3,7 +3,7 @@ import { Image } from 'react-datocms'
 import Contacts from '../contacts'
 import Container from '../container'
 
-export default function Landing({title, description, currentPosition, profilePicture}) {
+export default function About({title, description, currentPosition, profilePicture}) {
   return (
     <div id="about">
       <Container>

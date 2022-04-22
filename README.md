@@ -1,2 +1,2 @@
-# Portofino. Blog
-## A collection of random thought
+# www.tonihasibuan.com
+## A Personal website and collection of random thought

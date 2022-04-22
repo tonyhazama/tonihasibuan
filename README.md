@@ -1,4 +1,6 @@
 # tonihasibuan.com
 ## A Personal website and collection of random thought
 
-This websited is created using Next JS and Dato CMS
+This website is personal website containing portofolio and blog 
+
+This website is created using Next JS and Dato CMS

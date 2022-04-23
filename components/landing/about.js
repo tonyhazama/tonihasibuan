@@ -28,6 +28,9 @@ export default function About({title, description, currentPosition, profilePictu
             </div>
             <h2 className="text-xl font-bold mb-4">Lets get in touch ?</h2>
             <Contacts />
+            <a target="_blank" className="mt-8 flex" href="https://www.datocms-assets.com/65622/1650752760-cv_muhammad_sultoni.pdf">
+              <div className="px-8 py-2 border-main-white border-2 rounded-sm">Download CV</div>
+            </a>
           </div>
         </div>
       </Container>

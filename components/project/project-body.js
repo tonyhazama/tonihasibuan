@@ -1,10 +1,5 @@
 import React from 'react';
 import { Image, StructuredText } from 'react-datocms';
-import BackButton from '../back-button';
-import cn from "classnames";
-import Date from '../date';
-import Link from "next/link";
-// import { LinkIcon } from '@heroicons/react/solid';
 
 export default function ProjectBody({project}) {
   const {title, thumbnail, content, scopes = [], techStacks = [], screenshots = [], links = []} = project; 

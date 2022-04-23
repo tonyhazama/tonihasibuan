@@ -1,5 +1,5 @@
 import React from 'react';
-import BackButton from '../back-button';
+import BackButton from './back-button';
 import Date from '../date';
 
 export default function ProjectHeader({title, subtitle, date}) {

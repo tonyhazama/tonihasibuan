@@ -4,8 +4,8 @@ import Container from "@/components/container";
 import Layout from "@/components/layout";
 import { request } from "@/lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@/lib/fragments";
-import ProjectHeader from "@/components/profile/project-header";
-import ProjectBody from "@/components/profile/project-body";
+import ProjectHeader from "@/components/project/project-header";
+import ProjectBody from "@/components/project/project-body";
 
 export async function getStaticPaths() {
   const data = await request({ query: `{ allProjects { id } }` });
@@ -18,59 +18,58 @@ export async function getStaticPaths() {
 
 
 export async function getStaticProps({ params, preview }) {
-
   const projectId = parseInt(params.id);
 
   const graphqlRequest = {
     query: `
       query PostBySlug($id: ItemId) { 
-          site: _site {
-            favicon: faviconMetaTags {
-              ...metaTagsFragment
-            }
+        site: _site {
+          favicon: faviconMetaTags {
+            ...metaTagsFragment
           }
-          blog {
-            seo: _seoMetaTags {
-              ...metaTagsFragment
-            }
+        }
+        blog {
+          seo: _seoMetaTags {
+            ...metaTagsFragment
           }
-          project(filter: {id: {eq: $id}})  {
+        }
+        project(filter: {id: {eq: $id}})  {
+          title
+          subtitle
+          id
+          date
+          scopes {
             title
-            subtitle
+          }
+          techStacks {
+            title
+          }
+          thumbnail {
+            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
+              ...responsiveImageFragment
+            }
+          }
+          screenshots {
             id
-            date
-            scopes {
-              title
+            responsiveImage(imgixParams: {fm: jpg, fit: fill}) {
+              ...responsiveImageFragment
             }
-            techStacks {
-              title
-            }
-            thumbnail {
-              responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
-                ...responsiveImageFragment
-              }
-            }
-            screenshots {
-              id
-              responsiveImage(imgixParams: {fm: jpg, fit: fill}) {
-                ...responsiveImageFragment
-              }
-            }
-            content {
-              value
-              blocks {
-                __typename
-                ...on ImageBlockRecord {
-                  id
-                  image {
-                    responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
-                      ...responsiveImageFragment
-                    }
+          }
+          content {
+            value
+            blocks {
+              __typename
+              ...on ImageBlockRecord {
+                id
+                image {
+                  responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
+                    ...responsiveImageFragment
                   }
                 }
               }
             }
           }
+        }
       }
 
       ${metaTagsFragment}

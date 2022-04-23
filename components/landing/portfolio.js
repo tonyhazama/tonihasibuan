@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../container';
-import Project from './project';
+import PortfolioItem from './portfolio-item';
 
 export default function Portfolio({projects = []}) {
   return (
@@ -15,7 +15,7 @@ export default function Portfolio({projects = []}) {
         <div></div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {projects.map(project => (
-            <Project key={project.title} project={project} />
+            <PortfolioItem key={project.title} project={project} />
           ))}
         </div>
       </Container>

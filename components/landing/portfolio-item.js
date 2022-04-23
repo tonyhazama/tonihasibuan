@@ -4,7 +4,7 @@ import Link from "next/link";
 import cn from "classnames";
 import { Image } from 'react-datocms';
 
-export default function Project({project: {title = "Title", subtitle = "Subtitle", thumbnail, id}}) {
+export default function PortfolioItem({project: {title = "Title", subtitle = "Subtitle", thumbnail, id}}) {
   return (
     <Link href={`/project/${id}`}>
       <div className="cursor-pointer">

@@ -87,6 +87,7 @@ export default function Cv() {
     skills: [
       { icon: "html-5.svg", title: "HTML/CSS", level: "Expert" },
       { icon: "javascript.svg", title: "Javascript", level: "Expert" },
+      { icon: "git.svg", title: "Git", level: "Intermediate" },
       { icon: "angular.svg", title: "Angular", level: "Intermediate" },
       { icon: "react.svg", title: "React JS", level: "Intermediate" },
       { icon: "nextjs.svg", title: "Next JS", level: "Intermediate" },
@@ -95,7 +96,6 @@ export default function Cv() {
       { icon: "mysql.svg", title: "SQL Language", level: "Competent" },
     ],
     otherSkills: [
-      { icon: "", title: "Git" },
       { icon: "", title: "Adobe Photoshop" },
       { icon: "", title: "Adobe Illustrator" },
       { icon: "", title: "Figma" },

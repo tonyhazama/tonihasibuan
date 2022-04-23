@@ -82,7 +82,7 @@ export default function Index({ subscription }) {
         <Head>{renderMetaTags(metaTags)}</Head>
         <div>
           <About {...profile} />
-          <Skills />
+          {/* <Skills /> */}
           <Portfolio projects={projects} />
             {/* <pre>{JSON.stringify(al Projects, '', 2)}</pre> */}
         </div>

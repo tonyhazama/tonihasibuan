@@ -21,7 +21,7 @@ export async function getStaticProps({ preview }) {
           description
           currentPosition
           profilePicture {
-            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 400, h: 500 }) {
+            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 800, h: 800 }) {
               ...responsiveImageFragment
             }
           }

@@ -14,7 +14,7 @@ export default function HeroPost({
 }) {
   return (
     <section>
-      <div className="mb-4 mt-12 md:mb-8">
+      <div className="mb-4 md:mb-8">
         <CoverImage
           title={title}
           responsiveImage={coverImage.responsiveImage}

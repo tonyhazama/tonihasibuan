@@ -33,7 +33,6 @@ export async function getStaticProps({ params, preview = false }) {
             ...metaTagsFragment
           }
           title
-          subtitle
           slug
           content {
             value
@@ -58,14 +57,6 @@ export async function getStaticProps({ params, preview = false }) {
               ...responsiveImageFragment
             }
           }
-          author {
-            name
-            picture {
-              responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100, sat: -100}) {
-                ...responsiveImageFragment
-              }
-            }
-          }
         }
 
         morePosts: allPosts(orderBy: date_DESC, first: 2, filter: {slug: {neq: $slug}}) {
@@ -76,14 +67,6 @@ export async function getStaticProps({ params, preview = false }) {
           coverImage {
             responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
               ...responsiveImageFragment
-            }
-          }
-          author {
-            name
-            picture {
-              responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100, sat: -100}) {
-                ...responsiveImageFragment
-              }
             }
           }
         }

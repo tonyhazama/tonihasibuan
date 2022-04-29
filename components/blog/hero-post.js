@@ -14,27 +14,20 @@ export default function HeroPost({
 }) {
   return (
     <section>
-      <div className="mb-4 md:mb-8">
-        <CoverImage
-          title={title}
-          responsiveImage={coverImage.responsiveImage}
-          slug={slug}
-          padding={5}
-        />
-      </div>
-      <div>
-        <PostTitle>{title}</PostTitle>
-        <PostSubtitle>{subtitle}</PostSubtitle>
-      </div>
-      <div className="mb-12">
-        <div>
-          <div className="mb-2 text-lg">
-            <Date dateString={date} />
-          </div>
+      <div className="flex flex-wrap md:flex-row-reverse">
+        <div className=" w-full md:w-4/6">
+          <CoverImage
+            title={title}
+            responsiveImage={coverImage.responsiveImage}
+            slug={slug}
+            padding={5}
+          />
         </div>
-        <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          {/* <Avatar name={author.name} picture={author.picture} /> */}
+        <div className="w-full md:w-2/6 py-16 px-8 flex flex-col items-center justify-center bg-main-white dark:bg-sub-dark">
+          <PostTitle>{title}</PostTitle>
+          {/* <PostSubtitle>{subtitle}</PostSubtitle> */}
+          <p className="text-center leading-relaxed mb-4">{excerpt}</p>
+          <Date dateString={date} />
         </div>
       </div>
     </section>

@@ -33,7 +33,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="transition fixed top-0 left-0 right-0 shadow text-sm bg-white dark:bg-main-dark dark:border-b border-sub-dark dark:text-sub-white print:hidden z-10">
+      <div className="transition fixed top-0 left-0 right-0 shadow text-sm bg-white dark:bg-slate-900 dark:border-b border-sub-dark dark:text-sub-white print:hidden z-10">
         <Container>
           <div className="flex flex-wrap flex-row align-middle py-4 ">
             <div className="flex-1 md:w-3/12 md:flex-none">

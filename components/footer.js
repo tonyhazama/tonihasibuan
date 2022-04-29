@@ -6,8 +6,8 @@ export default function Footer() {
     <footer className="bg-sub-dark text-sub-white border-t border-main-dark print:hidden">
       <Container>
         <div className="pt-8 pb-12">
-          <h3 className="text-center tracking-tighter leading-tight text-sm mb-4">
-            &copy; 2019 Muhammad Sultoni
+          <h3 className="tracking-tighter leading-tight text-sm mb-4">
+            &copy; 2019 tonihasibuan.com
           </h3>
           <div>
             <Contacts center={true} />

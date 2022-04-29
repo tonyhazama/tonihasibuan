@@ -20,7 +20,7 @@ export default function About({title, description, currentPosition, profilePictu
               HELLO, I AM <span className="transition-all text-sub-dark dark:text-teal-400">MUHAMMAD SULTONI</span>
             </div>
             <div className="text-lg mb-4">
-              I am a Professional Web Developer with 4 Years of Experience working in the IT industry. 
+              I am a Professional Web Developer with over 3 Years of Experience working in the IT industry. 
               I am proficient in HTML/CSS, Javascript, React JS, and Angular. 
               I am also competent in Java, Next.JS, and SQL Language. 
               I listen to music a lot and play video games on my free time.

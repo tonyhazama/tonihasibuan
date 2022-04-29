@@ -24,21 +24,12 @@ export async function getStaticProps({ preview }) {
         }
         allPosts(orderBy: date_DESC, first: 20) {
           title
-          subtitle
           slug
           excerpt
           date
           coverImage {
-            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 1920, h: 1080 }) {
+            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 1000, h: 720 }) {
               ...responsiveImageFragment
-            }
-          }
-          author {
-            name
-            picture {
-              responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100, sat: -100}) {
-                ...responsiveImageFragment
-              }
             }
           }
         }
@@ -72,15 +63,15 @@ export default function Index({ subscription }) {
     data: { allPosts, site, blog },
   } = useQuerySubscription(subscription);
 
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+  const heroPost = allPosts[allPosts.length - 1];
+  const morePosts = allPosts.slice(0, -1);
   const metaTags = blog.seo.concat(site.favicon);
 
   return (
     <>
-      <Layout preview={subscription.preview}>
+      <Layout>
         <Head>{renderMetaTags(metaTags)}</Head>
-        <Container>
+        <Container noPadding={true}>
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -92,7 +83,6 @@ export default function Index({ subscription }) {
               excerpt={heroPost.excerpt}
             />
           )}
-          <SectionSeparator />
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </Layout>

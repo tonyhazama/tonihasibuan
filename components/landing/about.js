@@ -1,5 +1,6 @@
 import React from 'react'
 import { Image } from 'react-datocms'
+import Link from "next/link";
 import Contacts from '../contacts'
 import Container from '../container'
 
@@ -30,9 +31,14 @@ export default function About({title, description, currentPosition, profilePictu
             </div>
             <h2 className="text-xl font-bold mb-4">Lets get in touch </h2>
             <Contacts />
-            <a target="_blank" className="mt-8 flex" href="https://www.datocms-assets.com/65622/1650752760-cv_muhammad_sultoni.pdf">
+            {/* <a target="_blank" className="mt-8 flex" href="https://www.datocms-assets.com/65622/1650752760-cv_muhammad_sultoni.pdf">
               <div className="px-8 py-2 border-sub-dark dark:border-main-white border-2 rounded-sm">Download CV</div>
-            </a>
+            </a> */}
+            <Link href="/cv">
+              <a className="mt-8 flex">
+                <div className="px-8 py-2 border-sub-dark dark:border-main-white border-2 rounded-sm">Resume</div>
+              </a>
+            </Link>
           </div>
         </div>
       </Container>

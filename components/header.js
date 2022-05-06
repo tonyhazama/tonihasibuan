@@ -1,6 +1,5 @@
 import { titles } from "const";
 import Link from "next/link";
-import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
 import { useContext, useEffect, useState } from "react";
 import Container from "./container";
 import { AppContext, SET_THEME } from "@/lib/app-context";

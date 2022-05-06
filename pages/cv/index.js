@@ -19,7 +19,7 @@ export default function Cv() {
     },
     name: "Muhammad Sultoni",
     profession: "Web Developer",
-    aboutMe: `I am a Professional Web Developer with 4 Years of Experience working in the IT industry. I am proficient in HTML/CSS, Javascript, React JS, and Angular. I am also competent in Java, Next.JS, and SQL Language. I have a strong artistic sense, logical thinking & problem-solving skills.`,
+    aboutMe: `I am a Professional Web Developer with 3 Years of Experience working in the IT industry. I am proficient in HTML/CSS, Javascript, React JS, and Angular. I am also competent in Java, Next.JS, and SQL Language. I have a strong artistic sense, logical thinking & problem-solving skills.`,
     contacts: [
       {icon: AiFillMail, title: 'mail@tonihasibuan.com', link: 'mailto:mail@tonihasibuan.com'},
       {icon: AiFillGithub, title: 'github.com/tonyhazama', link: 'https://github.com/tonyhazama'},
@@ -91,9 +91,10 @@ export default function Cv() {
       { icon: "angular.svg", title: "Angular", level: "Intermediate" },
       { icon: "react.svg", title: "React JS", level: "Intermediate" },
       { icon: "nextjs.svg", title: "Next JS", level: "Intermediate" },
-      { icon: "java.svg", title: "Java", level: "Competent" },
       { icon: "nodejs.svg", title: "Node JS", level: "Competent" },
       { icon: "mysql.svg", title: "SQL Language", level: "Competent" },
+      { icon: "python.svg", title: "Python", level: "Beginner" },
+      { icon: "java.svg", title: "Java", level: "Beginner" },
     ],
     otherSkills: [
       { icon: "", title: "Adobe Photoshop" },

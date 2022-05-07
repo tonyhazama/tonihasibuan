@@ -23,7 +23,7 @@ export default function About({title, description, currentPosition, profilePictu
             <div className="text-lg mb-4">
               I am a Professional Web Developer with over 3 Years of Experience working in the IT industry. 
               I am proficient in HTML/CSS, Javascript, React JS, and Angular. 
-              I am also competent in Java, Next.JS, and SQL Language. 
+              I am also competent in Java, Next.JS, Python, and SQL Language. 
               I listen to music a lot and play video games on my free time.
             </div>
             <div className="text-lg mb-8">

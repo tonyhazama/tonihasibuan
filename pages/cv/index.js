@@ -19,12 +19,12 @@ export default function Cv() {
     },
     name: "Muhammad Sultoni",
     profession: "Web Developer",
-    aboutMe: `I am a Professional Web Developer with 3 Years of Experience working in the IT industry. I am proficient in HTML/CSS, Javascript, React JS, and Angular. I am also competent in Java, Next.JS, and SQL Language. I have a strong artistic sense, logical thinking & problem-solving skills.`,
+    aboutMe: `I am a Professional Web Developer with over 3 Years of Experience working in the IT industry. I am proficient in HTML/CSS, Javascript, React JS, and Angular. I am also competent in Java, Next.JS, and SQL Language. I have a strong artistic sense, logical thinking & problem-solving skills.`,
     contacts: [
-      {icon: AiFillMail, title: 'mail@tonihasibuan.com', link: 'mailto:mail@tonihasibuan.com'},
+      {icon: FiGlobe, title: 'www.tonihasibuan.com', link: 'https://www.tonihasibuan.com/'},
+      {icon: AiFillMail, title: 'muhammad.sultoni.hsb@gmail.com', link: 'mailto:muhammad.sultoni.hsb@gmail.com'},
       {icon: AiFillGithub, title: 'github.com/tonyhazama', link: 'https://github.com/tonyhazama'},
       {icon: AiFillLinkedin, title: 'in/muhammad-sultoni-hsb', link: 'https://www.linkedin.com/in/muhammad-sultoni-hsb/'},
-      {icon: FiGlobe, title: 'www.tonihasibuan.com', link: 'https://www.tonihasibuan.com/'},
     ],
     experiences: [
       {
@@ -80,7 +80,7 @@ export default function Cv() {
       {
         degree: "Software Engineering",
         school: "SMKN 4 Padalarang",
-        date: {from: "Jan 2016", to: "Apr 2018"},
+        date: {from: "Jan 2015", to: "Apr 2018"},
         description: ""
       },
     ],
@@ -353,7 +353,7 @@ const EducationItem = ({school, degree, description, date}) => {
 const SkillItem = ({title, level, icon}) => {
 
   return (
-    <div className="flex flex-wrap items-center mb-2 mr-2  p-1 px-2  rounded-sm border-gray-300 border-[1px] ">
+    <div className="flex flex-wrap items-center mb-2 mr-2  p-1 px-2  rounded-sm border-gray-300 border-thin ">
       {icon && <img src={`/static/${icon}`} className="h-skill-icon mr-2" />}
       <div>{title}</div>
       {level && (

@@ -6,7 +6,7 @@ import Container from '../container'
 
 export default function About({title, description, currentPosition, profilePicture}) {
   return (
-    <div id="about">
+    <section id="about">
       <Container>
         <div className="pt-8 pb-16  md:py-16 flex border-b-2 border-stone-200 dark:border-sub-dark flex-col md:flex-row-reverse">
           <div className="w-full mb-8 md:mb-0 xl:w-96 lg:w-64 md:w-48">
@@ -42,6 +42,6 @@ export default function About({title, description, currentPosition, profilePictu
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   )
 }

@@ -7,7 +7,7 @@ export default function Portfolio({projects = []}) {
     <div className="py-24" id="works">
       <Container>
         <h2 className="text-center text-xl font-bold">
-          This is what i've worked on
+          This is what I have worked on
         </h2>
         <h5 className="text-center">
           A curated list of professional work i did over the years.

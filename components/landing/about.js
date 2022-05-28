@@ -10,7 +10,7 @@ export default function About({title, description, currentPosition, profilePictu
       <Container>
         <div className="pt-8 pb-16  md:py-16 flex border-b-2 border-stone-200 dark:border-sub-dark flex-col md:flex-row-reverse">
           <div className="w-full mb-8 md:mb-0 xl:w-96 lg:w-64 md:w-48">
-            <div className="rounded-xl md:rounded-full overflow-hidden">
+            <div className="rounded-xl overflow-hidden">
             {profilePicture && 
               <Image data={{ ...profilePicture.responsiveImage, alt: `Profile Picture`, }} />
             }

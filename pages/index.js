@@ -6,6 +6,7 @@ import { metaTagsFragment, responsiveImageFragment } from "@/lib/fragments";
 import About from "@/components/landing/about";
 import Portfolio from "@/components/landing/portfolio";
 import Skills from "@/components/landing/skills";
+import Posts from "@/components/landing/posts";
 
 export async function getStaticProps({ preview }) {
   const graphqlRequest = {
@@ -84,6 +85,7 @@ export default function Index({ subscription }) {
           <About {...profile} />
           <Skills />
           <Portfolio projects={projects} />
+          <Posts />
         </div>
       </Layout>
     </div>

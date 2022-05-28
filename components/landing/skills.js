@@ -19,7 +19,7 @@ export default function Skills() {
       <Container>
         <div className="pt-8 pb-16  md:py-16 border-b-2 border-stone-200 dark:border-sub-dark flex-col md:flex-row-reverse">
           <h2 className="text-center text-xl font-bold mb-8">
-          This is what I have learned over the years
+          This is what I have used over the years
           </h2>
           <div className="flex flex-wrap justify-center">
             {skills.map(skill => (
@@ -35,15 +35,15 @@ export default function Skills() {
 const SkillItem = ({title, level, icon}) => {
 
   return (
-    <div className="flex flex-wrap items-center mb-2 mr-2  p-1 px-2  rounded-sm text-xl border-gray-300 border-thin">
-      {icon && <img src={`/static/${icon}`} className="h-skill-icon mr-2" />}
-      <div>{title}</div>
-      {level && (
+    <div className="flex flex-wrap items-center mb-2 p-2 px-4  rounded-sm text-xl ">
+      {icon && <img src={`/static/${icon}`} className="h-8" />}
+      {/* <div>{title}</div> */}
+      {/* {level && (
         <>
           <Dot />
           <span className="text-gray-600 text-base dark:text-mid-white">{level}</span>
         </>
-      )}
+      )} */}
     </div>
   )
 };

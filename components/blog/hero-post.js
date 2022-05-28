@@ -23,7 +23,7 @@ export default function HeroPost({
             padding={5}
           />
         </div>
-        <div className="w-full md:w-2/6 py-16 px-8 flex flex-col items-center justify-center bg-main-white dark:bg-sub-dark">
+        <div className="w-full md:w-2/6 py-16 px-8 flex flex-col items-center justify-center bg-slate-100 dark:bg-sub-dark">
           <PostTitle>{title}</PostTitle>
           {/* <PostSubtitle>{subtitle}</PostSubtitle> */}
           <p className="text-center leading-relaxed mb-4">{excerpt}</p>

@@ -75,7 +75,7 @@ const Links = ({onClickLink}) => {
     <>
       <NavLink o href="/#" title="ABOUT" />
       <NavLink href="/#works" title="WORKS" />
-      <NavLink href="/blog" title="BLOG" />
+      <NavLink href="/#blog" title="BLOG" />
     </>
   )
 }

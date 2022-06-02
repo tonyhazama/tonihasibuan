@@ -7,10 +7,10 @@ const skills = [
   { icon: "angular.svg", title: "Angular", level: "Intermediate" },
   { icon: "react.svg", title: "React JS", level: "Intermediate" },
   { icon: "nextjs.svg", title: "Next JS", level: "Intermediate" },
-  { icon: "nodejs.svg", title: "Node JS", level: "Competent" },
   { icon: "mysql.svg", title: "SQL Language", level: "Competent" },
-  { icon: "python.svg", title: "Python", level: "Beginner" },
   { icon: "java.svg", title: "Java", level: "Beginner" },
+  { icon: "nodejs.svg", title: "Node JS", level: "Competent" },
+  { icon: "python.svg", title: "Python", level: "Beginner" },
 ];
 
 export default function Skills() {
@@ -35,8 +35,8 @@ export default function Skills() {
 const SkillItem = ({title, level, icon}) => {
 
   return (
-    <div className="flex flex-wrap items-center mb-2 p-2 px-4  rounded-sm text-xl ">
-      {icon && <img src={`/static/${icon}`} className="h-8" />}
+    <div className="flex flex-wrap items-center mb-2 p-2 px-4  rounded-sm text-xl " title={title}>
+      {icon && <img src={`/static/${icon}`} className={"h-8 " + (icon === "nextjs.svg" ? "dark:invert" : "")} />}
       {/* <div>{title}</div> */}
       {/* {level && (
         <>

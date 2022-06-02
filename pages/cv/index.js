@@ -91,10 +91,10 @@ export default function Cv() {
       { icon: "angular.svg", title: "Angular", level: "Intermediate" },
       { icon: "react.svg", title: "React JS", level: "Intermediate" },
       { icon: "nextjs.svg", title: "Next JS", level: "Intermediate" },
-      { icon: "nodejs.svg", title: "Node JS", level: "Competent" },
-      { icon: "mysql.svg", title: "SQL Language", level: "Competent" },
+      { icon: "mysql.svg", title: "SQL Language", level: "Intermediate" },
+      { icon: "java.svg", title: "Java", level: "Intermediate" },
+      { icon: "nodejs.svg", title: "Node JS", level: "Beginner" },
       { icon: "python.svg", title: "Python", level: "Beginner" },
-      { icon: "java.svg", title: "Java", level: "Beginner" },
     ],
     otherSkills: [
       { icon: "", title: "Adobe Photoshop" },

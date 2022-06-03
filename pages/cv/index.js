@@ -28,17 +28,17 @@ export default function Cv() {
     ],
     experiences: [
       {
-        position: "Web Developer",
+        position: "Software Developer",
         workplace: "PT. Tujuh Sembilan",
         date: {from: "July 2018", to: "Present"},
-        description: "Working as a Programmer Talent and Outsource Employee\nWorked on School admission management system\n- Create a responsive Web Application\n- Create UI and Integrate payment gateway\n- Create Data visualization using datasets from API",
+        description: "Enroll in a bootcamp program and Working as a Programmer Talent and Outsource Employee",
         techStack: ['React', 'Angular', 'MySql', 'Java'],
         contract: "Full-time",
         img: "tujuhsembilan.jpg"
       },
       {
         workplace: "Bank BTPN",
-        position: "Fullstack Developer",
+        position: "Fullstack Developer (AngularJS & Springboot)",
         date: {from: "July 2021", to: "Present"},
         description: "Working on Collateral Management System and User Identity Management System\n- Migrate data using Talend Data Studio and MySQL environment\n- Create Scheduler to consume kafka message into system database\n- Create API, Create Frontend Component and perform integration process",
         techStack: ['React', 'Angular', 'MySql', 'Java'],
@@ -46,7 +46,16 @@ export default function Cv() {
         img: "btpn.jpg"
       },
       {
-        position: "Frontend Web Developer",
+        position: "Frontend Web Developer (ReactJS)",
+        workplace: "PT. Tujuh Sembilan",
+        date: {from: "July 2020", to: "July 2021"},
+        description: "Worked on Kolese Loyola School admission management system\n- Create a responsive Web Application\n- Create UI and Integrate payment gateway\n- Create Data visualization using datasets from API",
+        techStack: ['React', 'Angular', 'MySql', 'Java'],
+        contract: "Full-time",
+        img: "tujuhsembilan.jpg"
+      },
+      {
+        position: "Frontend Web Developer (AngularJS)",
         workplace: "PT Bank Central Asia Tbk,",
         title: "Market Auction Price",
         date: {from: "April 2020", to: "July 2020"},
@@ -56,7 +65,7 @@ export default function Cv() {
         img: "bca.jpg"
       },
       {
-        position: "Frontend Web Developer",
+        position: "Frontend Web Developer (AngularJS)",
         workplace: "PT Bank Central Asia Tbk,",
         title: "Market Auction Price",
         date: {from: "May 2019", to: "July 2020"},
@@ -66,7 +75,7 @@ export default function Cv() {
         img: "bca.jpg"
       },
       {
-        position: "Frontend Web Developer",
+        position: "Frontend Web Developer (ReactJS)",
         workplace: "Serasi Autoraya",
         title: "Market Auction Price",
         date: {from: "Jan 2019", to: "Apr 2019"},

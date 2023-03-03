@@ -24,7 +24,7 @@ export default function Cv() {
       {icon: FiGlobe, title: 'www.tonihasibuan.com', link: 'https://www.tonihasibuan.com/'},
       {icon: AiFillMail, title: 'muhammad.sultoni.hsb@gmail.com', link: 'mailto:muhammad.sultoni.hsb@gmail.com'},
       {icon: AiFillGithub, title: 'github.com/tonyhazama', link: 'https://github.com/tonyhazama'},
-      {icon: AiFillLinkedin, title: 'in/muhammad-sultoni-hsb', link: 'https://www.linkedin.com/in/muhammad-sultoni-hsb/'},
+      {icon: AiFillLinkedin, title: 'in/muhammad-sultoni-hsb', link: 'https://www.linkedin.com/in/tonihasibuan/'},
     ],
     experiences: [
       {
@@ -133,7 +133,7 @@ export default function Cv() {
         {icon: FiGlobe, title: 'tonihasibuan.com', link: 'https://www.tonihasibuan.com/'},
         {icon: AiFillMail, title: 'muhammad.sultoni@gmail.com', link: 'mailto:muhammad.sultoni@gmail.com'},
         {icon: AiFillGithub, title: 'github.com/tonyhazama', link: 'https://github.com/tonyhazama'},
-        {icon: AiFillLinkedin, title: 'linkedin.com/in/muhammad-sultoni-hsb', link: 'https://www.linkedin.com/in/muhammad-sultoni-hsb/'},
+        {icon: AiFillLinkedin, title: 'www.linkedin.com/in/tonihasibuan', link: 'https://www.linkedin.com/in/tonihasibuan/'},
       ],
       experiences: [
         {

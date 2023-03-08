@@ -19,71 +19,77 @@ export default function Cv() {
     },
     name: "Muhammad Sultoni",
     profession: "Web Developer",
-    aboutMe: `I am a Professional Web Developer with over 3 Years of Experience working in the IT industry. I am proficient in HTML/CSS, Javascript, React JS, and Angular. I am also competent in Java, Next.JS, and SQL Language. I have a strong artistic sense, logical thinking & problem-solving skills.`,
+    aboutMe: "I am a Professional Software developer with 4+ years of experience.I am passionate about software development and dedicated to delivering high-quality solutions. "+
+    "I stay up-to-date with the latest technologies and continuously improve my skills to provide efficient, effective, and user-friendly solutions for clients.",
     contacts: [
       {icon: FiGlobe, title: 'www.tonihasibuan.com', link: 'https://www.tonihasibuan.com/'},
       {icon: AiFillMail, title: 'muhammad.sultoni.hsb@gmail.com', link: 'mailto:muhammad.sultoni.hsb@gmail.com'},
       {icon: AiFillGithub, title: 'github.com/tonyhazama', link: 'https://github.com/tonyhazama'},
-      {icon: AiFillLinkedin, title: 'in/muhammad-sultoni-hsb', link: 'https://www.linkedin.com/in/tonihasibuan/'},
+      {icon: AiFillLinkedin, title: 'in/tonihasibuan', link: 'https://www.linkedin.com/in/tonihasibuan/'},
     ],
     experiences: [
       {
-        position: "Software Developer",
-        workplace: "PT. Tujuh Sembilan",
-        date: {from: "July 2018", to: "Present"},
-        description: "Enroll in a bootcamp program and Working as a Programmer Talent and Outsource Employee",
+        position: "Frontend Web Developer",
+        workplace: "PT. Quadra Karya Santosa",
+        date: {from: "October 2022", to: "Present"},
+        description: "Developed Insurance proposal and registration portal\n"+
+        "- Setup project skeleton, folder structure and configurations\n"+
+        "- Implementing best practice, configuration and code standards \n"+
+        "- Create responsive Web application with multi-language and support",
         techStack: ['React', 'Angular', 'MySql', 'Java'],
         contract: "Full-time",
-        img: "tujuhsembilan.jpg"
+        img: "quadra.jpg"
       },
+      {
+        position: "Frontend Web Developer",
+        workplace: "PT. Orde Digital Intelektual",
+        date: {from: "July 2022", to: "Januari 2023"},
+        description: "Developed Cash management system for Corporate use\n"+
+        "- Leading development team and helped solve development problems\n"+
+        "- Created custom hooks, global components and scaffolding for other modules\n"+
+        "- Developed Highly Optimized and reusable code to accelerate development\n",
+        techStack: ['React', 'Angular', 'MySql', 'Java'],
+        contract: "Full-time",
+        img: "ordent.jpg"
+      },
+      {
+        position: "Software Developer",
+        workplace: "PT. Tujuh Sembilan",
+        date: {from: "July 2018", to: "July 2022"},
+        description: "Enrolled in a bootcamp program and worked as an outsourced employee.\n"+
+        "- Developed Kolese Loyola School admission management system\n"+
+        "- Created a responsive Web Application with localization support\n"+
+        "- Created and integrated a complex UI with an external API",
+        techStack: ['React', 'Angular', 'MySql', 'Java'],
+        contract: "Full-time",
+        img: "tujuhsembilan.jpg",
+      },
+      
       {
         workplace: "Bank BTPN",
         position: "Fullstack Developer (AngularJS & Springboot)",
-        date: {from: "July 2021", to: "Present"},
-        description: "Working on Collateral Management System and User Identity Management System\n- Migrate data using Talend Data Studio and MySQL environment\n- Create Scheduler to consume kafka message into system database\n- Create API, Create Frontend Component and perform integration process",
+        date: {from: "July 2021", to: "July 2022"},
+        description: "Worked on Collateral Management and User Identity Management System\n"+
+        "- Migrated data using Talend Data Studio and MySQL environment\n"+
+        "- Created Scheduler to consume kafka message into system database\n"+
+        "- Created API, Created Frontend Component and performed integration",
         techStack: ['React', 'Angular', 'MySql', 'Java'],
         contract: "Contract",
         img: "btpn.jpg"
       },
       {
-        position: "Frontend Web Developer (ReactJS)",
-        workplace: "PT. Tujuh Sembilan",
-        date: {from: "July 2020", to: "July 2021"},
-        description: "Worked on Kolese Loyola School admission management system\n- Create a responsive Web Application\n- Create UI and Integrate payment gateway\n- Create Data visualization using datasets from API",
-        techStack: ['React', 'Angular', 'MySql', 'Java'],
-        contract: "Full-time",
-        img: "tujuhsembilan.jpg"
-      },
-      {
-        position: "Frontend Web Developer (AngularJS)",
-        workplace: "PT Bank Central Asia Tbk,",
-        title: "Market Auction Price",
-        date: {from: "April 2020", to: "July 2020"},
-        description: "Worked on Housing loan simulation and proposal application\n- Develop modules, custom components & functions for the application\n- Integrate API to do calculation and data simulation\n- Deliver modular design & micro front-end approach",
-        techStack: ['React', 'Angular', 'MySql', 'Java'],
-        contract: "Contract",
-        img: "bca.jpg"
-      },
-      {
-        position: "Frontend Web Developer (AngularJS)",
-        workplace: "PT Bank Central Asia Tbk,",
+        position: "Frontend Web Developer (AngularJS & ReactJS)",
+        workplace: "PT NTT Indonesia Technology",
         title: "Market Auction Price",
         date: {from: "May 2019", to: "July 2020"},
-        description: "Worked on Swift Message Investigation Tool\n- Creating Project Framework, custom components, and Functions for the application\n- Perform Front-end and back-end API Integration\n- Implement dynamic routing and role management based on user privilege",
-        techStack: ['React', 'Angular', 'MySql', 'Java'],
+        description: "Developed a Swift message investigation tool, a housing loan simulation application, and a web application for auction car price statistics.\n"+
+          "- Developed a project framework, custom components, and reusable functions.\n"+
+          "- Implemented dynamic routing and role management based on user privilege.\n"+
+          "- Created dynamic data visualization and customizable charts.\n",
+        techStack: ['Angular', 'Java'],
         contract: "Contract",
-        img: "bca.jpg"
+        img: "ntt.jpg"
       },
-      {
-        position: "Frontend Web Developer (ReactJS)",
-        workplace: "Serasi Autoraya",
-        title: "Market Auction Price",
-        date: {from: "Jan 2019", to: "Apr 2019"},
-        description: "Worked on website for Market price statistics of auction cars\n- Develop React JS Web application\n- Create dynamic Data visualization using Highcharts\n- Create dynamic dashboard with customizable Chart ",
-        techStack: ['React', 'Angular', 'MySql', 'Java'],
-        contract: "Contract",
-        img: "sera.jpg"
-      }
     ],
     educations: [
       {
@@ -96,14 +102,13 @@ export default function Cv() {
     skills: [
       { icon: "html-5.svg", title: "HTML/CSS", level: "Expert" },
       { icon: "javascript.svg", title: "Javascript", level: "Expert" },
-      { icon: "git.svg", title: "Git", level: "Intermediate" },
-      { icon: "angular.svg", title: "Angular", level: "Intermediate" },
-      { icon: "react.svg", title: "React JS", level: "Intermediate" },
+      { icon: "git.svg", title: "Git", level: "Expert" },
+      { icon: "react.svg", title: "React JS", level: "Expert" },
       { icon: "nextjs.svg", title: "Next JS", level: "Intermediate" },
+      { icon: "angular.svg", title: "Angular", level: "Intermediate" },
       { icon: "mysql.svg", title: "SQL Language", level: "Intermediate" },
       { icon: "java.svg", title: "Java", level: "Intermediate" },
       { icon: "nodejs.svg", title: "Node JS", level: "Beginner" },
-      { icon: "python.svg", title: "Python", level: "Beginner" },
     ],
     otherSkills: [
       { icon: "", title: "Adobe Photoshop" },
@@ -112,8 +117,8 @@ export default function Cv() {
       { icon: "", title: "Talend Data Studio" },
     ],
     languages: [
-      {id: "id", title: "Bahasa Indonesia", level: "Native"},
-      {id: "en", title: "English", level: "Professional Working"}
+      {id: "id", title: "Bahasa Indonesia", level: "Fluent/Native"},
+      {id: "en", title: "English", level: "Working Proficiency"}
     ],
     },
 
@@ -158,7 +163,11 @@ export default function Cv() {
           position: "Frontend Web Developer",
           workplace: "PT Bank Central Asia Tbk,",
           date: {from: "April 2020", to: "July 2020"},
-          description: "Worked on Swift Message Investigation Tool\n- Creating Project Framework, Modules, Components, and Functions for the application\n- Perform Front-end and back-end API Integration\n- Deliver modular design & micro front-end approach\n- Perform code optimization process",
+          description: "Developed a Swift message investigation tool, a housing loan simulation application, and a web application for auction car price statistics.\n"+
+            "Developed a project framework, custom components, and reusable functions.\n"+
+            "Implemented dynamic routing and role management based on user privilege.\n"+
+            "Integrated an API to perform calculations and data simulations.\n"+
+            "Created dynamic data visualization with customizable charts using Highcharts.,\n",
           techStack: ['React', 'Angular', 'MySql', 'Java'],
           img: "bca.jpg"
         },
@@ -223,14 +232,14 @@ export default function Cv() {
           {/* <div className="py-2 px-4 bg-white dark:bg-main-dark  shadow-md flex items-center cursor-pointer font-semibold text-sm mr-8">
             <FiFile className="mr-2 text-lg" /> SEND TO MY EMAIl
           </div> */}
-          <div className="py-2 px-4 bg-white dark:bg-main-dark  shadow-md flex items-center cursor-pointer font-semibold text-sm" onClick={downloadPdf}>
+          <div className="py-2 px-4 bg-white dark:bg-main-dark  shadow-md print:shadow-none flex items-center cursor-pointer font-semibold text-sm" onClick={downloadPdf}>
             <FiFile className="mr-2 text-lg" /> DOWNLOAD PDF
           </div>
         </div>
 
-        <div id="cvContent" className="w-cv shadow-xl m-auto min-h-full bg-white text-black print:w-auto">
+        <div id="cvContent" className="w-cv shadow-xl  print:shadow-none m-auto min-h-full bg-white text-black print:w-auto">
           <div className="p-paper-margin pb-0 flex flex-wrap print:p-0">
-            <div className="flex-1 pr-28">
+            <div className="flex-1 pr-28 print:pr-0">
               <h1 className="text-3xl font-bold">{name}</h1>
               <h5 className="text-xl mb-4">{profession}</h5>
               <div className="">{aboutMe}</div>
@@ -252,7 +261,7 @@ export default function Cv() {
             </div>
           </div>
 
-          <div className="px-paper-margin pt-paper-space print:px-0">
+          <div className="px-paper-margin pt-paper-space print:pt-0 print:px-0">
             <h5 className="font-semibold mb-4 text-cv-title">{labels.education}</h5>
             <div>
               {educations.map(edu => {
@@ -319,9 +328,10 @@ const ContactItem = ({icon, title, link}) => {
   )
 }
 
-const ExperienceItem = ({workplace, position, description, date, img, contract, duration}) => {
+const ExperienceItem = ({workplace, position, description, date, img, contract, duration, children}) => {
 
   return (
+    <>
     <div className="flex flex-wrap mb-4 last:mb-0">
       <div className="pr-4">
         <div className="w-16 h-16  bg-gray-100 flex justify-center items-center overflow-hidden">
@@ -338,6 +348,11 @@ const ExperienceItem = ({workplace, position, description, date, img, contract, 
         <div className="mb-1 whitespace-pre-wrap">{description}</div>
       </div>
     </div>
+    
+    <div className='flex flex-col ml-8'>
+    {children && children.map(c => <ExperienceItem {...c} />)}
+    </div>
+    </>
   )
 };
 

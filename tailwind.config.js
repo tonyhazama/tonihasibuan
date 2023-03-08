@@ -41,8 +41,8 @@ module.exports = {
         tight: 1.2,
       },
       padding: {
-        "paper-margin": "4rem",
-        "paper-space": "2rem",
+        "paper-margin": "5rem",
+        "paper-space": "2.5rem",
       },
       textColor: {
         "cv-title": "#1C8274",

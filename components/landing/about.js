@@ -8,32 +8,26 @@ export default function About({title, description, currentPosition, profilePictu
   return (
     <section id="about">
       <Container>
-        <div className="pt-8 pb-16  md:py-16 flex border-b-2 border-stone-200 dark:border-sub-dark flex-col md:flex-row-reverse">
-          <div className="w-full mb-8 md:mb-0 xl:w-96 lg:w-64 md:w-48">
-            <div className="rounded-xl overflow-hidden">
+        <div className="pt-8 pb-16  md:py-16 flex border-b-2 border-stone-200 dark:border-sub-dark flex-col md:flex-row">
+          <div className="w-full mb-8 md:mb-0 xl:w-72 lg:w-64 md:w-48">
+            <div className="rounded-lg overflow-hidden">
             {profilePicture && 
               <Image data={{ ...profilePicture.responsiveImage, alt: `Profile Picture`, }} />
             }
             </div>
           </div>
-          <div className="flex-1 mr-16 flex flex-col justify-center">
+          <div className="flex-1 md:ml-16 flex flex-col justify-center">
             <div className="text-3xl font-bold md:mb-4">
               HELLO, I AM <span className="transition-all text-sub-dark dark:text-teal-400">MUHAMMAD SULTONI</span>
             </div>
             <div className="text-lg mb-4">
-              I am a Professional Web Developer with over 3 Years of Experience working in the IT industry. 
-              I am proficient in HTML/CSS, Javascript, React JS, and Angular. 
-              I am also competent in Java, Next.JS, Python, and SQL Language. 
-              I listen to music a lot and play video games on my free time.
+            I am a Professional Software developer with 4+ years of experience.I am passionate about software development and dedicated to delivering high-quality solutions. I stay up-to-date with the latest technologies and continuously improve my skills to provide efficient, effective, and user-friendly solutions for clients.
             </div>
             <div className="text-lg mb-8">
-              Currently working at PT. Padepokan Tujuh Sembilan
+              Currently working at PT. Quadra Karya Santosa
             </div>
             <h2 className="text-xl font-bold mb-4">Lets get in touch </h2>
             <Contacts />
-            {/* <a target="_blank" className="mt-8 flex" href="https://www.datocms-assets.com/65622/1650752760-cv_muhammad_sultoni.pdf">
-              <div className="px-8 py-2 border-sub-dark dark:border-main-white border-2 rounded-sm">Download CV</div>
-            </a> */}
             <Link href="/cv">
               <a className="mt-8 flex">
                 <div className="px-8 py-2 border-sub-dark dark:border-main-white border-2 rounded-sm">Resume</div>

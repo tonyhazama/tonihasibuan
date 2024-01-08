@@ -8,217 +8,120 @@ import Layout from '@/components/layout';
 export default function Cv() {
   const [language, setLanguage] = useState('en');
 
-  const data = {
-    en: {labels: {
-      experience: "Work Experience",
-      education: "Education ",
-      "skill": "Technical Skills",
-      "otherSkill": "Other Skill",
-      "language": "Language",
-      "appendix": "Lampiran"
+  const data = {labels: {
+    experience: "Work Experience",
+    education: "Education ",
+    "skill": "Technical Skills",
+    "otherSkill": "Other Skill",
+    "language": "Language",
+    "appendix": "Lampiran"
+  },
+  name: "Muhammad Sultoni",
+  profession: "Web Developer",
+  aboutMe: "I am a Professional Software developer with 4+ years of experience.I am passionate about software development and dedicated to delivering high-quality solutions. "+
+  "I stay up-to-date with the latest technologies and continuously improve my skills to provide efficient, effective, and user-friendly solutions for clients.",
+  contacts: [
+    {icon: FiGlobe, title: 'www.tonihasibuan.com', link: 'https://www.tonihasibuan.com/'},
+    {icon: AiFillMail, title: 'muhammad.sultoni.hsb@gmail.com', link: 'mailto:muhammad.sultoni.hsb@gmail.com'},
+    {icon: AiFillGithub, title: 'github.com/tonyhazama', link: 'https://github.com/tonyhazama'},
+    {icon: AiFillLinkedin, title: 'in/tonihasibuan', link: 'https://www.linkedin.com/in/tonihasibuan/'},
+  ],
+  experiences: [
+    {
+      position: "Frontend Web Developer",
+      workplace: "PT Barrans Global Mandiri",
+      date: {from: "October 2022", to: "Present"},
+      description: "Developed Insurance proposal app and admin portal\n"+
+      "- Setup project skeleton, folder structure and configurations\n"+
+      "- Maintaining best practice, configuration and code standards \n"+
+      "- Create responsive Web application with multi-language and support",
+      techStack: ['Next JS',],
+      contract: "Full-time",
+      img: "barrans.jpeg"
     },
-    name: "Muhammad Sultoni",
-    profession: "Web Developer",
-    aboutMe: "I am a Professional Software developer with 4+ years of experience.I am passionate about software development and dedicated to delivering high-quality solutions. "+
-    "I stay up-to-date with the latest technologies and continuously improve my skills to provide efficient, effective, and user-friendly solutions for clients.",
-    contacts: [
-      {icon: FiGlobe, title: 'www.tonihasibuan.com', link: 'https://www.tonihasibuan.com/'},
-      {icon: AiFillMail, title: 'muhammad.sultoni.hsb@gmail.com', link: 'mailto:muhammad.sultoni.hsb@gmail.com'},
-      {icon: AiFillGithub, title: 'github.com/tonyhazama', link: 'https://github.com/tonyhazama'},
-      {icon: AiFillLinkedin, title: 'in/tonihasibuan', link: 'https://www.linkedin.com/in/tonihasibuan/'},
-    ],
-    experiences: [
-      {
-        position: "Frontend Web Developer",
-        workplace: "PT. Quadra Karya Santosa",
-        date: {from: "October 2022", to: "Present"},
-        description: "Developed Insurance proposal and registration portal\n"+
-        "- Setup project skeleton, folder structure and configurations\n"+
-        "- Implementing best practice, configuration and code standards \n"+
-        "- Create responsive Web application with multi-language and support",
-        techStack: ['React', 'Angular', 'MySql', 'Java'],
-        contract: "Full-time",
-        img: "quadra.jpg"
-      },
-      {
-        position: "Frontend Web Developer",
-        workplace: "PT. Orde Digital Intelektual",
-        date: {from: "July 2022", to: "Januari 2023"},
-        description: "Developed Cash management system for Corporate use\n"+
-        "- Leading development team and helped solve development problems\n"+
-        "- Created custom hooks, global components and scaffolding for other modules\n"+
-        "- Developed Highly Optimized and reusable code to accelerate development\n",
-        techStack: ['React', 'Angular', 'MySql', 'Java'],
-        contract: "Full-time",
-        img: "ordent.jpg"
-      },
-      {
-        position: "Software Developer",
-        workplace: "PT. Tujuh Sembilan",
-        date: {from: "July 2018", to: "July 2022"},
-        description: "Enrolled in a bootcamp program and worked as an outsourced employee.\n"+
-        "- Developed Kolese Loyola School admission management system\n"+
-        "- Created a responsive Web Application with localization support\n"+
-        "- Created and integrated a complex UI with an external API",
-        techStack: ['React', 'Angular', 'MySql', 'Java'],
-        contract: "Full-time",
-        img: "tujuhsembilan.jpg",
-      },
-      
-      {
-        workplace: "Bank BTPN",
-        position: "Fullstack Developer (AngularJS & Springboot)",
-        date: {from: "July 2021", to: "July 2022"},
-        description: "Worked on Collateral Management and User Identity Management System\n"+
-        "- Migrated data using Talend Data Studio and MySQL environment\n"+
-        "- Created Scheduler to consume kafka message into system database\n"+
-        "- Created API, Created Frontend Component and performed integration",
-        techStack: ['React', 'Angular', 'MySql', 'Java'],
-        contract: "Contract",
-        img: "btpn.jpg"
-      },
-      {
-        position: "Frontend Web Developer (AngularJS & ReactJS)",
-        workplace: "PT NTT Indonesia Technology",
-        title: "Market Auction Price",
-        date: {from: "May 2019", to: "July 2020"},
-        description: "Developed a Swift message investigation tool, a housing loan simulation application, and a web application for auction car price statistics.\n"+
-          "- Developed a project framework, custom components, and reusable functions.\n"+
-          "- Implemented dynamic routing and role management based on user privilege.\n"+
-          "- Created dynamic data visualization and customizable charts.\n",
-        techStack: ['Angular', 'Java'],
-        contract: "Contract",
-        img: "ntt.jpg"
-      },
-    ],
-    educations: [
-      {
-        degree: "Software Engineering",
-        school: "SMKN 4 Padalarang",
-        date: {from: "Jan 2015", to: "Apr 2018"},
-        description: ""
-      },
-    ],
-    skills: [
-      { icon: "html-5.svg", title: "HTML/CSS", level: "Expert" },
-      { icon: "javascript.svg", title: "Javascript", level: "Expert" },
-      { icon: "git.svg", title: "Git", level: "Expert" },
-      { icon: "react.svg", title: "React JS", level: "Expert" },
-      { icon: "nextjs.svg", title: "Next JS", level: "Intermediate" },
-      { icon: "angular.svg", title: "Angular", level: "Intermediate" },
-      { icon: "mysql.svg", title: "SQL Language", level: "Intermediate" },
-      { icon: "java.svg", title: "Java", level: "Intermediate" },
-      { icon: "nodejs.svg", title: "Node JS", level: "Beginner" },
-    ],
-    otherSkills: [
-      { icon: "", title: "Adobe Photoshop" },
-      { icon: "", title: "Adobe Illustrator" },
-      { icon: "", title: "Figma" },
-      { icon: "", title: "Talend Data Studio" },
-    ],
-    languages: [
-      {id: "id", title: "Bahasa Indonesia", level: "Fluent/Native"},
-      {id: "en", title: "English", level: "Working Proficiency"}
-    ],
+    {
+      position: "Frontend Web Developer",
+      workplace: "PT. Orde Digital Intelektual",
+      date: {from: "July 2022", to: "Januari 2023"},
+      description: "Developed Cash management system for Corporate use\n"+
+      "- Leading development team and helped solve development problems\n"+
+      "- Created custom hooks, global components and scaffolding for other modules\n"+
+      "- Developed Highly Optimized and reusable code to accelerate development\n",
+      techStack: ['React', 'Angular', 'MySql', 'Java'],
+      contract: "Full-time",
+      img: "ordent.jpg"
     },
-
-    id: {
-      labels: {
-        experience: "Pengalaman Kerja",
-        education: "Pendidikan ",
-        "skill": "Skill",
-        "otherSkill": "Other Skill",
-        "language": "Bahasa",
-        "appendix": "Lampiran"
-      },
-      name: "Muhammad Sultoni",
-      profession: "Web Developer",
-      aboutMe: `Saya adalah seorang Web Developer Profesional dengan 4 Tahun Pengalaman bekerja di industri TI. Saya mahir dalam HTML/CSS, Javascript, React JS, dan Angular. Saya juga kompeten di Java, Next.JS, dan Bahasa SQL. Saya memiliki rasa artistik yang kuat, pemikiran logis & keterampilan memecahkan masalah.`,
-      contacts: [
-        {icon: FiGlobe, title: 'tonihasibuan.com', link: 'https://www.tonihasibuan.com/'},
-        {icon: AiFillMail, title: 'muhammad.sultoni@gmail.com', link: 'mailto:muhammad.sultoni@gmail.com'},
-        {icon: AiFillGithub, title: 'github.com/tonyhazama', link: 'https://github.com/tonyhazama'},
-        {icon: AiFillLinkedin, title: 'www.linkedin.com/in/tonihasibuan', link: 'https://www.linkedin.com/in/tonihasibuan/'},
-      ],
-      experiences: [
-        {
-          workplace: "Bank BTPN",
-          position: "Fullstack Developer",
-          title: "Market Auction Price",
-          date: {from: "July 2021", to: "Present"},
-          description: "Worked on Collateral Management System, User Identity Management System\n- Enhance existing application\n- Migrate multi-system data into one single app using Talend Data Studio and MySQL environment\n- Create Scheduler to consume kafka message into system database\n- Create Springboot API for frontend and reporting\n- Integrate Springboot Microservices and Angular",
-          techStack: ['React', 'Angular', 'MySql', 'Java'],
-          img: "btpn.jpg"
-        },
-        {
-          position: "Frontend Web Developer",
-          workplace: "PT. Tujuh Sembilan",
-          title: "Market Auction Price",
-          date: {from: "July 2020", to: "July 2021"},
-          description: "Worked on Marketplace Auction Price (Analytics application) at PT. SerasiAutoraya using React",
-          techStack: ['React', 'Angular', 'MySql', 'Java'],
-          img: "tujuhsembilan.jpg"
-        },
-        {
-          position: "Frontend Web Developer",
-          workplace: "PT Bank Central Asia Tbk,",
-          date: {from: "April 2020", to: "July 2020"},
-          description: "Developed a Swift message investigation tool, a housing loan simulation application, and a web application for auction car price statistics.\n"+
-            "Developed a project framework, custom components, and reusable functions.\n"+
-            "Implemented dynamic routing and role management based on user privilege.\n"+
-            "Integrated an API to perform calculations and data simulations.\n"+
-            "Created dynamic data visualization with customizable charts using Highcharts.,\n",
-          techStack: ['React', 'Angular', 'MySql', 'Java'],
-          img: "bca.jpg"
-        },
-        {
-          position: "Frontend Web Developer",
-          workplace: "PT Bank Central Asia Tbk,",
-          title: "Market Auction Price",
-          date: {from: "May 2019", to: "July 2020"},
-          description: "Worked on Marketplace Auction Price (Analytics application) at PT. SerasiAutoraya using React",
-          techStack: ['React', 'Angular', 'MySql', 'Java'],
-          img: "bca.jpg"
-        },
-        {
-          position: "Frontend Web Developer",
-          workplace: "Serasi Autoraya",
-          title: "Market Auction Price",
-          date: {from: "Jan 2019", to: "Apr 2019"},
-          description: "",
-          techStack: ['React', 'Angular', 'MySql', 'Java'],
-          img: "sera.jpg"
-        }
-      ],
-      educations: [
-        {
-          degree: "Software Engineering",
-          school: "SMKN 4 Padalarang",
-          date: {from: "Jan 2019", to: "Apr 2019"},
-          description: "Worked on Marketplace Auction Price (Analytics application) at PT. SerasiAutoraya using React"
-        },
-      ],
-      skills: [
-        {title: "HTML/CSS", level: "Expert"},
-        {title: "Javascript", level: "Expert"},
-        {title: "Angular", level: "Intermediate"},
-        {title: "React JS", level: "Intermediate"},
-        {title: "Next JS", level: "Intermediate"},
-        {title: "Java", level: "Competent"},
-      ],
-      languages: [
-        {id: "id", title: "Bahasa Indonesia", level: "Native"},
-        {id: "en", title: "English", level: "Professional Working"}
-      ],
-    }
+    {
+      position: "Software Developer",
+      workplace: "PT. Tujuh Sembilan",
+      date: {from: "July 2018", to: "July 2022"},
+      description: "Enrolled in a bootcamp program and worked as an outsourced employee.\n"+
+      "- Developed Kolese Loyola School admission management system\n"+
+      "- Created a responsive Web Application with localization support\n"+
+      "- Created and integrated a complex UI with an external API",
+      techStack: ['React', 'Angular', 'MySql', 'Java'],
+      contract: "Full-time",
+      img: "tujuhsembilan.jpg",
+    },
+    
+    {
+      workplace: "Bank BTPN",
+      position: "Fullstack Developer (AngularJS & Springboot)",
+      date: {from: "July 2021", to: "July 2022"},
+      description: "Worked on Collateral Management and User Identity Management System\n"+
+      "- Migrated data using Talend Data Studio and MySQL environment\n"+
+      "- Created Scheduler to consume kafka message into system database\n"+
+      "- Created API, Created Frontend Component and performed integration",
+      techStack: ['React', 'Angular', 'MySql', 'Java'],
+      contract: "Contract",
+      img: "btpn.jpg"
+    },
+    {
+      position: "Frontend Web Developer (AngularJS & ReactJS)",
+      workplace: "PT NTT Indonesia Technology",
+      title: "Market Auction Price",
+      date: {from: "May 2019", to: "July 2020"},
+      description: "Developed a Swift message investigation tool, a housing loan simulation application, and a web application for auction car price statistics.\n"+
+        "- Developed a project framework, custom components, and reusable functions.\n"+
+        "- Implemented dynamic routing and role management based on user privilege.\n"+
+        "- Created dynamic data visualization and customizable charts.\n",
+      techStack: ['Angular', 'Java'],
+      contract: "Contract",
+      img: "ntt.jpg"
+    },
+  ],
+  educations: [
+    {
+      degree: "Software Engineering",
+      school: "SMKN 4 Padalarang",
+      date: {from: "Jan 2015", to: "Apr 2018"},
+      description: ""
+    },
+  ],
+  skills: [
+    { icon: "html-5.svg", title: "HTML/CSS", level: "Expert" },
+    { icon: "javascript.svg", title: "Javascript", level: "Expert" },
+    { icon: "git.svg", title: "Git", level: "Expert" },
+    { icon: "react.svg", title: "React JS", level: "Expert" },
+    { icon: "nextjs.svg", title: "Next JS", level: "Intermediate" },
+    { icon: "angular.svg", title: "Angular", level: "Intermediate" },
+    { icon: "mysql.svg", title: "SQL Language", level: "Intermediate" },
+    { icon: "java.svg", title: "Java", level: "Intermediate" },
+    { icon: "nodejs.svg", title: "Node JS", level: "Beginner" },
+  ],
+  otherSkills: [
+    { icon: "", title: "Adobe Photoshop" },
+    { icon: "", title: "Adobe Illustrator" },
+    { icon: "", title: "Figma" },
+    { icon: "", title: "Talend Data Studio" },
+  ],
+  languages: [
+    {id: "id", title: "Bahasa Indonesia", level: "Fluent/Native"},
+    {id: "en", title: "English", level: "Working Proficiency"}
+  ],
   };
 
-  const {name, profession, aboutMe, labels = {}, experiences = [], educations = [], skills = [], languages = [], contacts = [], otherSkills = []} = data[language];
-
-  const toggleLangguage = () => {
-    console.log("s")
-    setLanguage(language === "en" ? "id" : "en")
-  }
+  const {name, profession, aboutMe, labels = {}, experiences = [], educations = [], skills = [], languages = [], contacts = [], otherSkills = []} = data;
 
   const downloadPdf = () => {
     window.print();
